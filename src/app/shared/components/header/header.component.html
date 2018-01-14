@@ -1,3 +1,15 @@
-<p>
-  header works!
-</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon>bookmark</mat-icon>
+    <span>Alexandria</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon">search</mat-icon>
+    <button mat-button [mat-menu-trigger-for]="menu">
+      User
+    </button>
+    <mat-menu x-position="before" #menu="matMenu">
+      <button mat-menu-item>Options</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

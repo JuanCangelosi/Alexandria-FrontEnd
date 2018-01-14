@@ -9,17 +9,17 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthenticationService } from './shared/services/authentication.service';
 import { AuthGuard } from './shared/auth/auth.guard';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     AuthenticationService,
