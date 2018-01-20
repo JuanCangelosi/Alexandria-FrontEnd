@@ -1,42 +1,5 @@
-<div class="spaced-card">
-    <mat-card>
-        <mat-card-title>
-          Recomendados
-        </mat-card-title>
-        <mat-card-content>
-          <mat-grid-list cols="4">
-            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-              {{tile.text}}
-            </mat-grid-tile>
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
-</div>
-<div class="spaced-card">
-    <mat-card>
-        <mat-card-title>
-          Recomendados
-        </mat-card-title>
-        <mat-card-content>
-          <mat-grid-list cols="4">
-            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-              <a (click)="seeBook(tile)">{{tile.text}}</a>
-            </mat-grid-tile>
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
-</div>
-<div class="spaced-card">
-    <mat-card>
-        <mat-card-title>
-          Recomendados
-        </mat-card-title>
-        <mat-card-content>
-          <mat-grid-list cols="4">
-            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-              {{tile.text}}
-            </mat-grid-tile>
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
-</div>
+<app-book-carousel [bookList]="bookList"></app-book-carousel>
+<app-book-carousel [bookList]="bookList"></app-book-carousel>
+<app-book-carousel [bookList]="bookList"></app-book-carousel>
+<app-book-carousel [bookList]="bookList"></app-book-carousel>
+<app-book-carousel [bookList]="bookList"></app-book-carousel>

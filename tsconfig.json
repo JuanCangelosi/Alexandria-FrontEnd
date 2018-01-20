@@ -1,5 +1,12 @@
 {
   "compileOnSave": false,
+  "include": [
+    "src/**/*",
+    // Fix of angular 5 incompatibility with quill
+    "node_modules/ngx-quill-editor/quillEditor.component.ts",
+    "node_modules/ngx-quill-editor/quillEditor.module.ts",
+    "node_modules/ngx-quill-editor/index.ts"
+  ],
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

@@ -9,13 +9,18 @@ import { Router } from '@angular/router';
 export class BookListComponent implements OnInit {
 
 
-  tiles = [
-    {text: 'One', cols: 1, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 1, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 1, rows: 1, color: '#DDBDF1'},
-  ];
-
+  bookList = {
+    title: 'Recomendados',
+    books : [
+      {text: 'One', cols: 1, rows: 1, color: 'lightblue'},
+      {text: 'Two', cols: 1, rows: 1, color: 'lightgreen'},
+      {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+      {text: 'Four', cols: 1, rows: 1, color: '#DDBDF1'},
+      {text: 'Four', cols: 1, rows: 1, color: '#DDBDF1'},
+      {text: 'Four', cols: 1, rows: 1, color: '#DDBDF1'},
+    ]
+  };
+  
   constructor(private router: Router) { 
 
   }
@@ -25,6 +30,9 @@ export class BookListComponent implements OnInit {
 
   public seeBook(book: any) {
     this.router.navigate(['bookData']);
+  }
+  public createBook(book: any) {
+    this.router.navigate(['bookCreate']);
   }
 
 }

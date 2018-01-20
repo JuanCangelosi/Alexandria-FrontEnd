@@ -7,6 +7,7 @@ import { MaterialNavigationModule } from '../../shared/modules/material-componen
 import { MaterialPopupsModule } from '../../shared/modules/material-components/material-popups.module';
 import { MaterialButtonsModule } from '../../shared/modules/material-components/material-buttons.module';
 import { MaterialLayoutModule } from '../../shared/modules/material-components/material-layout.module';
+import { BookCarouselComponent } from './book-carousel/book-carousel.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { MaterialLayoutModule } from '../../shared/modules/material-components/m
     MaterialButtonsModule,
     MaterialLayoutModule
   ],
-  declarations: [BookListComponent]
+  declarations: [BookListComponent, BookCarouselComponent]
 })
 export class BookListModule { }

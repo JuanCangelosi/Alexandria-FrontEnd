@@ -10,6 +10,14 @@ const routes: Routes = [
   {
     path: 'bookData',
     loadChildren: 'app/layout/book-list/book-data/book-data.module#BookDataModule'
+  },
+  {
+    path: 'bookView',
+    loadChildren: 'app/layout/book-list/book-view/book-view.module#BookViewModule'
+  },
+  {
+    path: 'bookCreate',
+    loadChildren: 'app/layout/book-list/book-create/book-create.module#BookCreateModule'
   }
 ];
 

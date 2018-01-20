@@ -1,0 +1,4 @@
+<!-- <div [froalaEditor]="{heightMin: 1000,heightMax: 2000}"></div> -->
+<quill-editor [(ngModel)]="editorContent" [options]="editorOptions" (blur)="onEditorBlured($event)" (focus)="onEditorFocused($event)"
+    (ready)="onEditorCreated($event)" (change)="onContentChanged($event)">
+</quill-editor>

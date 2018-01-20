@@ -1,15 +1,43 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <mat-icon>bookmark</mat-icon>
-    <span>Alexandria</span>
+  <mat-toolbar-row *ngIf="!showSearch">
+    <span (click)="showMainScreen()">Alexandria</span>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon">search</mat-icon>
-    <button mat-button [mat-menu-trigger-for]="menu">
+    <!-- <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Clearable input" [(ngModel)]="value"/>
+            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field> -->
+    <button mat-icon-button (click)="showSearch = !showSearch">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button (click)="showBookcase()">
+      <mat-icon>books</mat-icon>
+    </button>
+    <button mat-icon-button [mat-menu-trigger-for]="notMenu">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <mat-menu x-position="before" #notMenu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item (click)="showMessages()">Mensajes: 0</button>
+      <button mat-menu-item (click)="showComments()">Commentarios: 1</button>
+    </mat-menu>
+    <button mat-button [mat-menu-trigger-for]="userMenu">
       User
     </button>
-    <mat-menu x-position="before" #menu="matMenu">
+    <mat-menu x-position="before" #userMenu="matMenu" [overlapTrigger]="false">
       <button mat-menu-item>Options</button>
       <button mat-menu-item>Logout</button>
     </mat-menu>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="showSearch" class="search-bar">
+    <button mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+    <mat-form-field class="example-form">
+      <input matInput class="example-full-width" placeholder="Search book ... " value="">
+    </mat-form-field>
+    <button mat-icon-button (click)="showSearch = false">
+      <mat-icon>cancel</mat-icon>
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>

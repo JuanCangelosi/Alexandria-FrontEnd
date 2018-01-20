@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public showSearch = false;
+
+  constructor(private router: Router) { 
+
+  }
 
   ngOnInit() {
+  }
+
+  public showMessages() {
+    this.router.navigate(['/message']);
+  }
+  public showComments() {
+    this.router.navigate(['/message']);
+  }
+  public showMainScreen() {
+    this.router.navigate(['/booklist']);
+  }
+  public showBookcase() {
+    this.router.navigate(['/bookcase']);
   }
 
 }
