@@ -8,6 +8,7 @@ import { MaterialPopupsModule } from '../../shared/modules/material-components/m
 import { MaterialButtonsModule } from '../../shared/modules/material-components/material-buttons.module';
 import { MaterialLayoutModule } from '../../shared/modules/material-components/material-layout.module';
 import { BookCarouselComponent } from './book-carousel/book-carousel.component';
+import { SwiperModule } from 'angular2-useful-swiper';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { BookCarouselComponent } from './book-carousel/book-carousel.component';
     MaterialNavigationModule,
     MaterialPopupsModule,
     MaterialButtonsModule,
-    MaterialLayoutModule
+    MaterialLayoutModule,
+    SwiperModule
   ],
   declarations: [BookListComponent, BookCarouselComponent]
 })

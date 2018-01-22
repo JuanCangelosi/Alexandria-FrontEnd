@@ -1,14 +1,25 @@
 <div class="spaced-card">
-    <mat-card>
-        <mat-card-title>
-          {{bookList.title}}
-        </mat-card-title>
-        <mat-card-content>
-          <mat-grid-list cols=10>
-            <mat-grid-tile *ngFor="let tile of bookList.books" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-              <a (click)="seeBook(tile)">{{tile.text}}</a>
-            </mat-grid-tile>
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
+  <mat-card>
+    <swiper [config]="config">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let book of bookList.books">{{book.text}}</div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </swiper>
+    <!-- <mat-card-title>
+      {{bookList.title}}
+    </mat-card-title>
+    <mat-card-content class="carrousel-panel">
+      <mat-grid-list cols=8 class="carrousel-list">
+        <mat-grid-tile *ngFor="let tile of bookList.books" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+          <a (click)="seeBook(tile)">{{tile.text}}</a>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  -->
+  </mat-card>
 </div>

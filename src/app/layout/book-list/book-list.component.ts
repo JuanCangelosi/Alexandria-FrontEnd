@@ -20,8 +20,8 @@ export class BookListComponent implements OnInit {
       {text: 'Four', cols: 1, rows: 1, color: '#DDBDF1'},
     ]
   };
-  
-  constructor(private router: Router) { 
+
+  constructor(private router: Router) {
 
   }
 

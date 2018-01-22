@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 export class BookCarouselComponent implements OnInit {
   @Input('bookList') bookList;
 
+  config: SwiperOptions = {
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    spaceBetween: 30
+};
+
   constructor(private router: Router) { }
 
   ngOnInit() {
